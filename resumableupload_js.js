@@ -1,7 +1,7 @@
 "use strict";
 /**
  * ResumableUploadToGoogleDrive for Javascript library
- * GitHub  https://github.com/tanaikech/ResumableUploadToGoogleDrive_js<br>
+ * GitHub  https://github.com/tanaikech/ResumableUploadForGoogleDrive_js<br>
  */
 (function(r) {
   let ResumableUploadToGoogleDrive;
