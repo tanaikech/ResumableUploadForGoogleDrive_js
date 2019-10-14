@@ -183,8 +183,11 @@ function showSidebar() {
 ## Sample script 3
 [Resumable Upload of Multiple Files with Asynchronous Process for Google Drive](https://github.com/tanaikech/AsynchronousResumableUploadForGoogleDrive)
 
+![](https://github.com/tanaikech/AsynchronousResumableUploadForGoogleDrive/raw/master/images/demo.gif)
+
 ### Overview
 This is a sample script for uploading multiple files with large size (> 50 MB) at the sidebar, dialog of Google Docs and Web Apps using the resumable upload of the asynchronous process with Javascript and Google Apps Script (GAS).
+
 
 ## `resource` for Method of `Do()`
 
