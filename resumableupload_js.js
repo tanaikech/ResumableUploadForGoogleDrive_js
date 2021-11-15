@@ -10,6 +10,7 @@
     function ResumableUploadToGoogleDrive() {
       this.obj = {};
       this.chunkSize = 52428800;
+      this.partsOfChunks = 10;
       this.endpoint =
         "https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable";
     }
@@ -85,6 +86,13 @@
         ) {
           this.chunkSize = resource.chunkSize;
         }
+        if (
+          "partsOfChunks" in resource &&
+          resource.partsOfChunks <= 20 &&
+          resource.partsOfChunks === parseInt(resource.partsOfChunks, 10)
+        ) {
+          this.partsOfChunks = resource.partsOfChunks;
+        }
         if ("fields" in resource && resource.fields != "") {
           this.endpoint += "&fields=" + encodeURIComponent(resource.fields);
         }
@@ -124,6 +132,7 @@
       let chunkPot = {};
       chunkPot.total = fileSize;
       chunkPot.chunks = [];
+<<<<<<< HEAD
       if (fileSize > chunkSize) {
         const numE = chunkSize;
         const endS = (function (f, n) {
@@ -156,6 +165,34 @@
           numByte: fileSize,
         };
         chunkPot.chunks.push(chunk);
+=======
+      let numE =
+        fileSize > chunkSize
+          ? chunkSize
+          : Math.ceil(fileSize / (262144 * this.partsOfChunks)) * 262144;
+      const endS = (function(f, n) {
+        const c = f % n;
+        if (c == 0) {
+          return 0;
+        } else {
+          return c;
+        }
+      })(fileSize, numE);
+      const repeat = Math.floor(fileSize / numE);
+      for (let i = 0; i <= repeat; i++) {
+        const startAddress = i * numE;
+        let c = {};
+        c.startByte = startAddress;
+        if (i < repeat) {
+          c.endByte = startAddress + numE - 1;
+          c.numByte = numE;
+          chunkPot.chunks.push(c);
+        } else if (i == repeat && endS > 0) {
+          c.endByte = startAddress + endS - 1;
+          c.numByte = endS;
+          chunkPot.chunks.push(c);
+        }
+>>>>>>> 91c1eb21c39632a192de88fe9ae75bf8f27bb65a
       }
       return chunkPot;
     };
