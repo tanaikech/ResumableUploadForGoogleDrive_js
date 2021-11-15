@@ -15,6 +15,8 @@ When a file more than 5 MB is uploaded to Google Drive with Drive API, [the resu
 
 # Install
 
+## Class ResumableUploadToGoogleDrive
+
 ```html
 <script src="resumableupload_js.min.js"></script>
 ```
@@ -23,6 +25,18 @@ Or, using jsdelivr cdn
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/ResumableUploadForGoogleDrive_js@master/resumableupload_js.min.js"></script>
+```
+
+## Class ResumableUploadToGoogleDrive2
+
+```html
+<script src="resumableupload2_js.min.js"></script>
+```
+
+Or, using jsdelivr cdn
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/ResumableUploadForGoogleDrive_js@master/resumableupload2_js.min.js"></script>
 ```
 
 # Classes
@@ -236,7 +250,7 @@ Document of OAuth2 is [here](https://developers.google.com/identity/protocols/OA
 This is a simple sample script. In this sample script, it supposes that the access token is retrieved by [Google APIs Client Library for browser JavaScript, aka gapi](https://github.com/google/google-api-javascript-client).
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/ResumableUploadForGoogleDrive_js@master/resumableupload_js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/ResumableUploadForGoogleDrive_js@master/resumableupload2_js.min.js"></script>
 
 <body>
   <form>
@@ -309,7 +323,7 @@ function showSidebar() {
 <form><input name="file" id="uploadfile" type="file" /></form>
 <div id="progress"></div>
 
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/ResumableUploadForGoogleDrive_js@master/resumableupload_js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/ResumableUploadForGoogleDrive_js@master/resumableupload2_js.min.js"></script>
 
 <script>
   document.getElementById("uploadfile").addEventListener("change", run, false);
