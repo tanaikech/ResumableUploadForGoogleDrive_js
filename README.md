@@ -1,6 +1,5 @@
 # ResumableUploadForGoogleDrive_js
 
-[![Build Status](https://travis-ci.org/tanaikech/ResumableUploadForGoogleDrive_js.svg?branch=master)](https://travis-ci.org/tanaikech/ResumableUploadForGoogleDrive_js)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENCE)
 
 <a name="top"></a>
@@ -272,7 +271,7 @@ This is a simple sample script. In this sample script, it supposes that the acce
     resumableUpload(resource);
   }
 
-  function resumableUpload(e) {
+  function resumableUpload(resource) {
     document.getElementById("progress").innerHTML = "Initializing.";
 
     const ru = new ResumableUploadToGoogleDrive2();
@@ -339,7 +338,7 @@ function showSidebar() {
       .getAuth();
   }
 
-  function resumableUpload(e) {
+  function resumableUpload(resource) {
     document.getElementById("progress").innerHTML = "Initializing.";
 
     const ru = new ResumableUploadToGoogleDrive2();
