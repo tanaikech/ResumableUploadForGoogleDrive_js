@@ -234,7 +234,7 @@ There are several properties in the object `resource` for the method of `Do()` a
 - `folderId` : Destination folder ID of uploading file. When this property is not used, the uploaded file is created to the root folder of Google Drive.
 - `convertToGoogleDocs` : If this property is used as `true`, the uploaded file is converted to Google Docs. But in this case, if the file size is large, an error might occur. Please be careful this. The default value is `false`. So the file is uploaded without converting.
 - `fields` : As a sample case, if you want to retrieve only file ID, please use `id`.
-- `chunkSize` : If you want to change the chunk size for the resumable upload, please use this. The default value is `52428800` (50 MB).
+- `chunkSize` : If you want to change the chunk size for the resumable upload, please use this. The default value is `52428800` (50 MB). This value is required to be in multiples of 256 KB (256 x 1024 bytes). Please be careful about this. [Ref](https://developers.google.com/drive/api/guides/manage-uploads#uploading)
 
 <a name="resumableuploadtogoogledrive2"></a>
 
@@ -384,7 +384,7 @@ There are several properties in the object `resource` for the method of `Do()` a
 - `folderId` : Destination folder ID of uploading file. When this property is not used, the uploaded file is created to the root folder of Google Drive.
 - `convertToGoogleDocs` : If this property is used as `true`, the uploaded file is converted to Google Docs. But in this case, if the file size is large, an error might occur. Please be careful this. The default value is `false`. So the file is uploaded without converting.
 - `fields` : As a sample case, if you want to retrieve only file ID, please use `id`.
-- `chunkSize` : If you want to change the chunk size for the resumable upload, please use this. The default value is `52428800` (50 MB).
+- `chunkSize` : If you want to change the chunk size for the resumable upload, please use this. The default value is `52428800` (50 MB). This value is required to be in multiples of 256 KB (256 x 1024 bytes). Please be careful about this. [Ref](https://developers.google.com/drive/api/guides/manage-uploads#uploading)
 
 ---
 
