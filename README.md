@@ -414,7 +414,7 @@ If you have any questions and commissions for me, feel free to tell me.
 
   1. New Class ResumableUploadToGoogleDrive2 was added. By this, the large file which is over the memory in the local PC can be uploaded by the resumable upload.
 
-- v2.0.1 (April 18, 2021)
+- v2.0.1 (April 18, 2023)
 
   1. From [this discussion](https://github.com/tanaikech/ResumableUploadForGoogleDrive_js/issues/7), checking the inputted custom chunk size was strengthened in the script. And, the following document was added.
 
