@@ -98,7 +98,7 @@
         if (
           "chunkSize" in resource &&
           resource.chunkSize >= 262144 &&
-          resource.chunkSize % 1024 == 0
+          resource.chunkSize % 262144 == 0
         ) {
           this.chunkSize = resource.chunkSize;
         }
