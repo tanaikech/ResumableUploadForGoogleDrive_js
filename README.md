@@ -420,4 +420,8 @@ If you have any questions and commissions for me, feel free to tell me.
 
 	- `chunkSize` : If you want to change the chunk size for the resumable upload, please use this. The default value is `52428800` (50 MB). This value is required to be in multiples of 256 KB (256 x 1024 bytes). Please be careful about this. [Ref](https://developers.google.com/drive/api/guides/manage-uploads#uploading)
 
+- v2.0.2 (May 23, 2024)
+
+  1. From this version, the files could be also uploaded to the shared drive.
+
 [TOP](#top)

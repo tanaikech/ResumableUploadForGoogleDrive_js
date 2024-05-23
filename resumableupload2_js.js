@@ -10,7 +10,7 @@
       this.obj = {};
       this.chunkSize = 52428800;
       this.endpoint =
-        "https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable";
+        "https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable&supportsAllDrives=true";
     }
 
     /**
