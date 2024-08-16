@@ -217,6 +217,16 @@ function showSidebar() {
 
 This is a sample script for uploading multiple files with large size (> 50 MB) at the sidebar, dialog of Google Docs and Web Apps using the resumable upload of the asynchronous process with Javascript and Google Apps Script (GAS).
 
+## Sample script 4
+
+[Uploading Multiple Files with Split Asynchronous Processes and Resumable Upload in Google Spreadsheets](https://gist.github.com/tanaikech/42925de7efc497b5e8eb21f9dae6260d)
+
+![](images/fig1.gif)
+
+### Overview
+
+This sample script demonstrates uploading multiple files using split asynchronous processes with resumable upload. It leverages JavaScript and HTML within Google Spreadsheets.
+
 ## `resource` for Method of `Do()`
 
 There are several properties in the object `resource` for the method of `Do()` as follows.
